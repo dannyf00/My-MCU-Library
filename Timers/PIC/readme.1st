@@ -1,0 +1,3 @@
+timer .c/.h files for PIC10/12/16/18.
+
+May not work on all chips -> will need minor adjustments.
