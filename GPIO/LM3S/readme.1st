@@ -1,0 +1,5 @@
+gpio.h/c files for LM3S.
+
+Compiler: Keil mdk -> should work on CCS / IAR as well.
+
+uses Stellarisware.
