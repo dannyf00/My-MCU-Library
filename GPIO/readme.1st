@@ -1,0 +1,24 @@
+Here is the first part, and most often used part: GPIO.
+
+Two files, gpio.c and gpio.h - to be included in yrou project.
+
+Typical usage:
+
+```
+#include "gpio.h"           //we use gpio functions
+
+...
+
+int main(void) {
+  mcu_init();               //reset the chip
+  IO_CLR(LED_PORT, LED);    //turn on led, active low
+  IO_OUT(LED_DDR, LED);     //led as output
+  while (1) {
+    IO_FLP(LED_PORT, LED);  //flip the led
+    delay_ms(LED_DLY);      //waste some time
+  }
+  return 0;
+}
+```
+
+more details here: https://dannyelectronics.wordpress.com/2017/06/18/my-mcu-library-gpio/
