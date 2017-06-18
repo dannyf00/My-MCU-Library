@@ -1,1 +1,5 @@
 timer files for STM8
+
+Many timers are similar / identical, like TIM2/3/5, and TIM4/6.
+
+For those timers, you can port from a comparable timer easily.
