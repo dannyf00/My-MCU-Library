@@ -1,0 +1,17 @@
+Timers are useful in scheduling tasks periodically.
+
+So we want to initialize a timer, with a prescaler or period setting. Then we want to have the ability to install a user handler ("callback function") that gets executed once the timer overflows.
+
+Your code would look like this:
+
+#include "timer1.h"  //using timer1
+
+  timer1_init(100, F_CPU / 1000); //initialize timer to interrupt every 100 * F_CPU / 1000 cycles. or 100ms
+  timer1_act(led_flp);            //install user handler -> run led_flp every 100ms
+  ei(); //enable global interrupts
+  while (1) {
+  }
+
+The above code runs timer1 overflow interrupt every 100ms and led_flp() is executed inside of the isr: typically you want to make sure that the user handler runs fast and exits right away.
+
+more details here: https://dannyelectronics.wordpress.com/2017/06/18/my-mcu-library-timers/
