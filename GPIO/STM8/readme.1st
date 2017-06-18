@@ -1,0 +1,5 @@
+gpio.h/gpio.c files for STM8.
+
+Compiler: IAR-EWSTM8
+
+Uses stm8s.h from ST's standard peripheral library but not the library itself.
