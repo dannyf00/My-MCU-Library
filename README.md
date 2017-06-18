@@ -4,3 +4,5 @@ My library of code that works on various MCUs, to promote code re-usability and 
 Here is a set of routines that I often use in my personal projects on MCUs. The goal is to write code that can be used with no change, or little change, over a wide spectrum of devices.
 
 They are published here for your personal use as well.
+
+The goal is to update and expand it as time allows.
