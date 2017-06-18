@@ -1,0 +1,5 @@
+gpio.h/.c files for STM32F0 chips
+
+Compiler: gcc/mdk/iar
+
+Uses cmsis
