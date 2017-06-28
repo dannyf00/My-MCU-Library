@@ -8,7 +8,7 @@ void uart_init(uint32_t UARTn_BASE, uint32_t bps) {
 		case UART0_BASE: 
 			SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0); 
 			SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA); 
-			GPIOPinConfigure(GPIO_PA0_U0RX); GPIOPinConfigure(GPIO_PA1_U0TX);
+			//GPIOPinConfigure(GPIO_PA0_U0RX); GPIOPinConfigure(GPIO_PA1_U0TX);
 			GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1); 
 			UARTConfigSetExpClk(UART0_BASE, SysCtlClockGet(), bps, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE)); 
 			UARTEnable(UART0_BASE);
@@ -17,7 +17,7 @@ void uart_init(uint32_t UARTn_BASE, uint32_t bps) {
 		case UART1_BASE: 
 			SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1); 
 			SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD); 
-			GPIOPinConfigure(GPIO_PD2_U1RX); GPIOPinConfigure(GPIO_PD3_U1TX);
+			//GPIOPinConfigure(GPIO_PD2_U1RX); GPIOPinConfigure(GPIO_PD3_U1TX);
 			GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_2 | GPIO_PIN_3); 
 			UARTConfigSetExpClk(UART1_BASE, SysCtlClockGet(), bps, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE)); 
 			UARTEnable(UART1_BASE);
