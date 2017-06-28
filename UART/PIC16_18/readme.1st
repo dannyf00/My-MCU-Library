@@ -1,0 +1,3 @@
+Uart routines for PIC16/18 families of chips.
+
+They should work on most newer PIC16/18 chips as those peripherals are quite similar.
