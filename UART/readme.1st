@@ -1,0 +1,3 @@
+A collection of uart routines for MCUs.
+
+Those routines are not interrupt-driven. So they can be costly for transmitting long strings on MCUs without uart buffers.
