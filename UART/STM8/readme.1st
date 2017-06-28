@@ -1,0 +1,4 @@
+UART routines for STM8.
+
+Shown for UART1 but applicable to UART2..5.
+
