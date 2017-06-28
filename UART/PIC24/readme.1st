@@ -1,2 +1,5 @@
 UART routines for PIC24/dsPIC chips.
 
+It supports UART1 and UART2.
+
+With minimum changes, they should also work on PIC32 chips.
