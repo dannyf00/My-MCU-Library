@@ -1,0 +1,3 @@
+Timer routines for LPC chips. tested on LPC1768 but should work, with minimum changes, to most LPC chips, including LPC21xx and CMn LPC11xx, LPC12xx, LPC13xx, LPC17xx chips.
+
+Each timer block has 4 independent "virutal timers" using their compare match features.
