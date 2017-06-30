@@ -56,6 +56,7 @@ void uart_init(uint32_t uart_base, uint32_t bps) {
 		break;
 	}
     UARTConfigSetExpClk(uart_base, SysCtlClockGet(), bps, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+    UARTFIFOEnable(uart_base);
     UARTEnable(uart_base);										//enable uart
 }
 
