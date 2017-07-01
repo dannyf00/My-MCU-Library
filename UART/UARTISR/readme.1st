@@ -9,3 +9,5 @@ Thus, an interrupt-driven approach is preferred. The concept is simple:
 3.2 in the isr, test if the end of the string has been reached. if not, load up the next byte and go back; otherwise, turn off the uart interrupt so the transmission out of the buffer continues.
 
 Here, we are going to show an example of what difference it makes on a PIC24F.
+
+More details here: https://dannyelectronics.wordpress.com/2017/07/01/the-vital-importance-of-using-interrupt-driven-uart-transmission/
