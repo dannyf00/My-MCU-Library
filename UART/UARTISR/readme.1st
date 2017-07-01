@@ -1,0 +1,11 @@
+As we pointed out earlier, UARTs are generally slow. the use of a buffer will help but for long transmissions, it is a bottleneck for modern MCUs.
+
+Thus, an interrupt-driven approach is preferred. The concept is simple:
+
+1. initialize the mcu / uart as usual;
+2. at the beinging of the transmission, enable buffer empty interrupt (if available) or transmission completion interrupt;
+3. load up the uart transmission register with the first char; execution ends here.
+3.1 once that transmission ends, the interrupt flag will be set by the uart module, and the ISR execution begins.
+3.2 in the isr, test if the end of the string has been reached. if not, load up the next byte and go back; otherwise, turn off the uart interrupt so the transmission out of the buffer continues.
+
+Here, we are going to show an example of what difference it makes on a PIC24F.
