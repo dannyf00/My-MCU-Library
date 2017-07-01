@@ -15,7 +15,7 @@
 #define USART_WAIT(flag)		do {} while (flag==0)		//wait for a usart tranmission to end
 
 static char *_UxTX_ptr;
-unsigned char _UxTX_BUSY=0;		//0=u1 transmission done, 1=u1 transmission in process
+static unsigned char _UxTX_BUSY=0;		//0=u1 transmission done, 1=u1 transmission in process
 
 //ux transmit isr
 //'\0' is now transmitted
