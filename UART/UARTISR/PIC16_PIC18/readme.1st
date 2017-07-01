@@ -1,0 +1,5 @@
+Interrupt-driven UART routines for PIC16/PIC18 chips.
+
+Non-interrupt driven / polling uart routines are also provided for comparison.
+
+the two sets of routines ahre the same calling convention.
