@@ -1,0 +1,25 @@
+Two sets of routines are provided.
+
+1. uart2.h/.c: polling transmission on UART2;
+2. uart2isr.h/.c: interrupt-driven transmission on UART2.
+
+The calling convention is identical so by linking in the different low-level modules, the user can switch between the two easily.
+
+```
+	uart2_init(9600);					//reset uart2
+	ei();								//enable interrupt
+	while (1) {
+		//IO_FLP(LED_PORT, LED1);		//flip led
+
+		IO_SET(LED_PORT, LED1);
+		if (!uart2_busy()) uart2_puts("12345678\n\r");	//send ustring
+		IO_CLR(LED_PORT, LED1);
+
+		//waste sometime
+		systick_delayms(20);
+	}
+```
+
+the execution of polling version of uart2_puts() takes approximately 5ms on a 4Mhz PIC24F, and the interrupt version of it exits almost immediately.
+
+This frees up your mcu to do other things.
