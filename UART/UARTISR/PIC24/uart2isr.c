@@ -23,7 +23,7 @@ void _ISR _U2TXInterrupt(void) {
 	IO_SET(LATB, 1<<4); IO_CLR(LATB, 1<<4);
 	UxTXIF = 0;							//clear the flag
 	if (*++_UxTX_ptr) {					//0 indicates the end of the string
-		_UxTX_ptr;					//increment to the next char
+		//_UxTX_ptr;					//increment to the next char
 		UxTXREG = *_UxTX_ptr;			//load up a char to be transmitted
 	} else {
 		//UxSTA.UTXEN = 0;				//turn off the transmission
