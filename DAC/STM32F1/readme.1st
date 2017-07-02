@@ -1,0 +1,3 @@
+DAC routiens for STM32F1 chips - 12-bit full resolution.
+
+Direct register access. No SPL/HAL required.
