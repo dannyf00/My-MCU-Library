@@ -1,5 +1,9 @@
 3-wire interface with LCD160x display, via HC164 (also works with HC595).
 
+wiring:
+
+LCD_EN/LCD_SCK/LCD_SI on the same port
+
 typical usage:
 
 lcd_init();  //initialize the lcd
