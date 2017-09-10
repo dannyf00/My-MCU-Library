@@ -4,7 +4,6 @@ wiring:
 
 LCD_EN/LCD_SCK/LCD_SI on the same port
 
-typical usage:
 
 ```
 #include <string.h>							//we use strcpy()
