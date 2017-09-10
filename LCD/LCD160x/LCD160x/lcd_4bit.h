@@ -9,24 +9,24 @@
 //hardware configuration
 #define LCD_8BIT		0				//1=set the lcd in 8BIT mode, 0=in 4bit mode
 
-#define LCD_PORT		PORTA			//lcd pins on portc
-#define LCD_DDR			DDRA			//lcd pin's direction register
+#define LCD_PORT		PORTC 			//lcd pins on portc
+#define LCD_DDR			DDRC			//lcd pin's direction register
 //describe how LCD's data pins are connected to the mcu
-#define LCD_D0				Q0				//unused in 4-bit mode
-#define LCD_D1				Q1				//unused in 4-bit mode
-#define LCD_D2				Q2				//unused in 4-bit mode
-#define LCD_D3				Q3				//unused in 4-bit mode
-#define LCD_D4				(1<<3)				//LCD's D4 connected to LCD_PORT's 4th bit
-#define LCD_D5				(1<<2)		//LCD's D5 connected to LCD_PORT's 5th bit
-#define LCD_D6				(1<<1)			//LCD's D6 connected to LCD_PORT's 6th bit
-#define LCD_D7				(1<<0)			//LCD's D7 connected to LCD_PORT's 7nd bit
+#define LCD_D0			(0<<0)			//unused in 4-bit mode
+#define LCD_D1			(0<<1)			//unused in 4-bit mode
+#define LCD_D2			(0<<2)			//unused in 4-bit mode
+#define LCD_D3			(0<<3)			//unused in 4-bit mode
+#define LCD_D4			(1<<3)			//LCD's D4 connected to LCD_PORT's 4th bit
+#define LCD_D5			(1<<2)		//LCD's D5 connected to LCD_PORT's 5th bit
+#define LCD_D6			(1<<1)			//LCD's D6 connected to LCD_PORT's 6th bit
+#define LCD_D7			(1<<0)			//LCD's D7 connected to LCD_PORT's 7nd bit
 
 //how control lines (EN and RS) are connected
-#define LCD_CTRL_PORT	PORTA			//lcd_EN/_RS on port
-#define LCD_CTRL_DDR	DDRA
-#define LCD_RS			(1<<5)			//RS pin tied to the SO pin
-//#define LCD_RW			(1<<3)			//RW pin. hardware to ground
-#define LCD_EN			(1<<4)			//LCD_EN on portc.2
+#define LCD_CTRL_PORT	PORTB			//lcd_EN/_RS on port
+#define LCD_CTRL_DDR	DDRB
+#define LCD_RS			(1<<0)			//RS pin tied to portb.0
+//#define LCD_RW			(1<<3)			//RW pin. hardwired to ground
+#define LCD_EN			(1<<1)			//LCD_EN on portb.1
 //end of hardware configuration
 
 //do not change the definitions below for Q0..7

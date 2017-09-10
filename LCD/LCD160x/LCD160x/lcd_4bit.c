@@ -39,21 +39,21 @@
 
 //may need to adjust based on compiler optimization settings -> approximately 2ms or more per 16 characters / row
 #  if F_CPU > 64000000ul
-	#define lcd_delay()				{NOP64(); /*NOP();*/}	//delay(0)		//lcd delay for 20Mhz or higher
+	#define lcd_delay()				{NOP64(); }	//delay(0)		//lcd delay for 20Mhz or higher
 #elif F_CPU > 32000000ul
-	#define lcd_delay()				{NOP32(); /*NOP();*/}	//delay(0)		//lcd delay for 20Mhz or higher
+	#define lcd_delay()				{NOP32(); }	//delay(0)		//lcd delay for 20Mhz or higher
 #elif F_CPU > 16000000ul
-	#define lcd_delay()				{NOP16(); /*NOP();*/}	//delay(0)		//lcd delay for 20Mhz or higher
+	#define lcd_delay()				{NOP16(); }	//delay(0)		//lcd delay for 20Mhz or higher
 #elif F_CPU > 8000000ul
-	#define lcd_delay()				{NOP8(); /*NOP();*/}	//delay(0)		//lcd delay for 20Mhz or higher
+	#define lcd_delay()				{NOP8(); }	//delay(0)		//lcd delay for 20Mhz or higher
 #elif F_CPU > 4000000ul
-	#define lcd_delay()				{NOP4(); /*NOP();*/}	//delay(0)		//lcd delay for 20Mhz or higher
+	#define lcd_delay()				{NOP4(); }	//delay(0)		//lcd delay for 20Mhz or higher
 #else
-	#define lcd_delay()				{NOP2(); /*NOP();*/}						//no delay needed for low speed mcu
+	#define lcd_delay()				{NOP2(); }						//no delay needed for low speed mcu
 #endif
 
 
-#define	LCD_STROBE(rs)	{lcd_delay(0); if (rs) IO_SET(LCD_CTRL_PORT, LCD_RS); else IO_CLR(LCD_CTRL_PORT, LCD_RS); /*lcd_delay(0); */IO_SET(LCD_CTRL_PORT, LCD_EN); lcd_delay(2); IO_CLR(LCD_CTRL_PORT, LCD_EN);}
+#define	LCD_STROBE(rs)	{lcd_delay(); if (rs) IO_SET(LCD_CTRL_PORT, LCD_RS); else IO_CLR(LCD_CTRL_PORT, LCD_RS); IO_SET(LCD_CTRL_PORT, LCD_EN); lcd_delay(); IO_CLR(LCD_CTRL_PORT, LCD_EN);}
 
 /* write a byte to the LCD in 4/8 bit mode */
 void lcd_write(unsigned char c,  unsigned char rs) {
