@@ -5,7 +5,7 @@ wiring:
 LCD_EN/LCD_SCK/LCD_SI on the same port
 
 
-```
+```c
 #include <string.h>							//we use strcpy()
 #include "gpio.h"
 #include "delay.h"							//we use software delays
@@ -47,5 +47,5 @@ int main(void) {
 
 	return 0;
 }
-```
+```c
 
