@@ -12,21 +12,21 @@
 //hardware configuration
 #define LCD_8BIT		0			//1=set the lcd in 8BIT mode, 0=in 4bit mode
 
-#define LCD_PORT		LATB			//lcd pins on portc
-#define LCD_DIR			TRISB		//output direction
-#define LCD_EN			(1<<1)		//LCD_EN on RC5
-#define LCD_SCK			(1<<2)		//LCD_CLK on RC6
-#define LCD_SI			(1<<3)		//spi data in on RC7
+#define LCD_PORT		PORTB		//lcd pins on portb
+#define LCD_DIR			DDRB		//output direction
+#define LCD_EN			(1<<1)		//LCD_EN on PORTB1
+#define LCD_SCK			(1<<0)		//LCD_CLK on PORTB0
+#define LCD_SI			(1<<3)		//spi data in on portb3
 
 //describe how LCD's data pins are connected to 164's pins
-#define LCD_D0				HC164_Q0			//unused
-#define LCD_D1				HC164_Q1			//unused
-#define LCD_D2				HC164_Q2			//unused
-#define LCD_D3				HC164_Q3			//unused
-#define LCD_D4				HC164_Q7			//LCD's D4 connected to LCD_PORT's 7th bit
-#define LCD_D5				HC164_Q6			//LCD's D5 connected to LCD_PORT's 0th bit
-#define LCD_D6				HC164_Q5			//LCD's D6 connected to LCD_PORT's 5th bit
-#define LCD_D7				HC164_Q4			//LCD's D7 connected to LCD_PORT's 2nd bit
+#define LCD_D0			HC164_Q0			//unused in 4-bit mode
+#define LCD_D1			HC164_Q1			//unused
+#define LCD_D2			HC164_Q2			//unused
+#define LCD_D3			HC164_Q3			//unused
+#define LCD_D4			HC164_Q7			//LCD's D4 connected to LCD_PORT's 7th bit
+#define LCD_D5			HC164_Q6			//LCD's D5 connected to LCD_PORT's 0th bit
+#define LCD_D6			HC164_Q5			//LCD's D6 connected to LCD_PORT's 5th bit
+#define LCD_D7			HC164_Q4			//LCD's D7 connected to LCD_PORT's 2nd bit
 //#define LCD_RS		Q3			//LCD_RS to 164's Q3/Qd
 //end hardware configuration
 
